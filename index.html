@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="styleIndex.css">
 </head>
 <body>
-    <div class="wrapper">
     <header>
         <nav>
-            <button onclick = "loadPage('home.html')">Главная</button>
-            <button onclick = "loadPage('about.html')">О нас</button>
+            <button class="buttonsNav-header" onclick = "loadPage('home.html')">Главная</button>
+            <button class="buttonsNav-header" onclick = "loadPage('about.html')">О нас</button>
             <div class="menu-container">
-                <button id="contactButton">Контакты</button>
+                <button class="buttonsNav-header" id="contactButton">Контакты</button>
                 <div id="dropdownContacts" class="dropdown">
                     <a href="contacts.html">Telegram</a>
                     <a href="contacts.html">Busty</a>
@@ -23,8 +22,10 @@
                 </div>
             </div>
             <!-- добавить другие кнопки -->
+            <img src="./logo.png" alt="logo" width="40" height="40" id="logo-header">
         </nav>
     </header>
+    <div class="wrapper">
     <div id="content"></div>
     <script src="scripts/contactButton.js" defer></script>
     <script src="scripts/scrollTopButton.js" defer></script>

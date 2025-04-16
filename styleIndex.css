@@ -13,13 +13,13 @@ body {
     h1, h2, h3, h4, h5, h6, p {
         margin-left: 15px; 
     } /* отступы слева у заголовков и параграфов */
-    padding-top: 40px;
 }
 
 .wrapper {
     display: flex; /* Использует flexbox для размещения элементов */
     flex-direction: column; /* Размещает элементы вертикально */
     min-height: 100vh; /* Минимальная высота равна высоте окна браузера */
+    padding-top: 40px
 }
 .content {
     flex: 1; /* Растягивает контент, чтобы footer был внизу */
@@ -118,7 +118,7 @@ footer {
 
 .menu-container {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
 }
 .dropdown {
     display: none;
@@ -142,17 +142,46 @@ footer {
 }
 
 header {
-    position: fixed; /* Фиксирует header в верхней части страницы */
-    top: 0; /* Устанавливает верхнюю границу header на 0 */
-    left: 0; /* Устанавливает левую границу header на 0 */
-    width: 100%; /* Задает ширину header на 100% ширины окна браузера */
+    display: inline-flex; /* Включаем Flexbox для навигации */
+    justify-content: flex-start; /* Выравнивание кнопок по горизонтали */
+    align-items: stretch; /* Выравнивание кнопок по вертикали */
+    background-color: #400c51; /* Цвет фона навигации */
+    min-height: 40px; /* Высота навигации */
+    position: fixed; /* Фиксируем навигацию вверху страницы */
+    width: 100%; /* Ширина навигации на всю страницу */
+    z-index: 1000; /* Устанавливаем высокий z-index, чтобы навигация была поверх других элементов */
+    flex-wrap: nowrap; /* Запрещаем перенос кнопок на новую строку */
+    font-size: 1; /* Убираем размер шрифта, чтобы избежать пробелов между кнопками */
 }
-header button {
-    cursor: pointer; /* Изменяет курсор при наведении, показывая, что элемент интерактивен */
+.buttonsNav-header {
+    display: inline-flex; /* Размещает кнопки в строке */
+    align-items: center; /* Выравнивание кнопок по вертикали */
+    justify-content: center; /* Центрирует текст внутри кнопок */
+    padding-left: 10px; /* Отступы внутри кнопок */
+    padding-right: 10px; /* Отступы внутри кнопок */
+    color: white; /* Цвет текста */
+    cursor: pointer; /* Указываем, что элемент кликабельный */
+    background: none; /* Убираем фон */
+    background-color: #400c51;
+    border-left: 3px solid #320840; 
+    border-right: 3px solid #320840; 
+    border-top: none;
+    border-bottom: none;
+    height: 100%; /* Высота кнопок равна высоте навигации */
+    box-sizing: border-box; /* Учитывает отступы и границы в ширине и высоте */
+    white-space: nowrap; /* Запрещает перенос строк внутри кнопок */
 }
-
-#contactButton {
-    white-space: nowrap;
+.buttonsNav-header:hover {
+    background-color: #3a094a; /* Цвет фона при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+#logo-header {
+    display: inline-flex; /* Размещает логотип в строке */
+    align-items: center; /* Выравнивание кнопок по вертикали */
+    justify-content: center; /* Центрирует текст внутри кнопок */
+    height: 100%; /* Высота кнопок равна высоте навигации */
+    aspect-ratio: 1; /* Соотношение сторон 1:1 */
+    box-sizing: border-box; /* Учитывает отступы и границы в ширине и высоте */
 }
 
 #titleAbout {
@@ -166,5 +195,5 @@ header button {
     padding-right: 20px;
     padding-top: 20px; /* Отступы внутри заголовка */
     padding-bottom: 20px;
-    margin-top: 15px;
+    /* margin-top: 10px; */
 }
