@@ -116,7 +116,7 @@ footer {
     cursor: pointer; /* Изменяет курсор при наведении, показывая, что элемент интерактивен */
 }
 
-.mainAboutTitle {
+.mainTitle {
     display: flex; /* Использует flexbox для размещения элементов */
     background-color: #610182; /* Цвет фона */
     justify-content: center; /* Выравнивание по центру */
