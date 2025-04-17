@@ -3,144 +3,21 @@ html {
 }
 
 body {
-    font-family: Arial, Times New Roman; /* Устанавливает шрифт для всего документа */
+    font-family: Arial, Helvetica, sans-serif; /* Устанавливает шрифт для всего документа */
     margin: 0; /* Убирает отступы вокруг body */
     padding: 0; /* Убирает внутренние отступы у body */
     height: 100%; /* Задает высоту body на 100% высоты окна браузера */
-    background-color: #9885ee; 
-    color: #000000; /* Делает текст белым */
-    width: 100%;
+    width: 100%; /* Задает ширину на 100% */
     overflow-x: hidden; /* Убирает горизонтальную прокрутку */
+    color: rgb(0, 0, 0); /* Цвет текста */
+    background-color: #9885ee; /* Цвет фона */
 }
-body h1, h2, h3, h4, h5, h6, p {
-    margin-left: 15px; 
-} /* отступы слева у заголовков и параграфов */
 
 .wrapper {
     display: flex; /* Использует flexbox для размещения элементов */
     flex-direction: column; /* Размещает элементы вертикально */
     min-height: 100vh; /* Минимальная высота равна высоте окна браузера */
-    padding-top: 40px
-}
-.content {
-    flex: 1; /* Растягивает контент, чтобы footer был внизу */
-}
-
-#homeNavList {
-    color: #000000; /* Цвет текста */
-    text-decoration: none; /* Убирает подчеркивание у ссылок */
-    text-decoration: none !important;
-}
-
-footer {
-    display: flex; /* Использует flexbox для размещения элементов */
-    flex-direction: column; /* Размещает элементы вертикально */
-    font-family: Arial, Times New Roman;
-    margin: 0; /* Убирает отступы вокруг footer */
-    background-color: #261d29; /* Устанавливает темный фон для footer */
-    color: #fff; /* Делает текст белым */
-    flex-wrap: wrap; /* Позволяет переносить строки */
-    padding-left: 0px; /* Отступ слева */
-    line-height: 1.2; /* Высота строки для лучшей читаемости */
-    font-size: 12px; /* Размер шрифта */
-    margin-top: 20px;
-    width: 100%; /* Задает ширину на 100% */
-}
-.footer-nav {
-    display: flex; /* Использует flexbox для размещения элементов */
-    flex-direction: row; /* Размещает элементы горизонтально */
-    gap: 20px;
-    align-items: center; /* Выравнивание по центру */
-}
-.footer-nav a {
-    display: flex; /* Использует flexbox для размещения элементов */
-    color: #fff;
-    cursor: pointer; /* Изменяет курсор при наведении, показывая, что элемент интерактивен */
-    text-decoration: none; /* Убирает подчеркивание у ссылок */
-}
-#scrollToTop {
-    cursor: pointer; /* Изменяет курсор при наведении, показывая, что элемент интерактивен */
-}
-
-.whoWeAre {
-    display: flex; /* Использует flexbox для размещения элементов */
-    flex-direction: column; /* Размещает элементы вертикально */
-    color: #fff; /* Цвет текста внутри блока */
-    border: 4px solid #450058; /* Граница блока */
-    border-radius: 20px; /* Скругление углов блока */
-    overflow: hidden; /* Скрывает переполнение содержимого */
-    margin-right: 20px; /* Отступ справа */
-    margin-left: 20px; /* Отступ слева */
-    max-width: 80ch;
-    min-width: 30ch;
-}
-.whoWeAreTitle {
-    text-align: center; /* Центрирует текст */
-    font-size: 24px; /* Размер заголовка */
-    background-color: rgb(47, 0, 62); /* Цвет фона */
-    padding: 15px; /* Отступы внутри заголовка */
-    margin: 0; /* Убирает отступы вокруг заголовка */
-}
-.whoWeAreParagraphs {
-    display: flex;
-    flex-wrap: wrap; /* Позволяет переносить строки */
-    justify-content: space-between; /* Равномерно распределяет текст */
-    align-items: flex-start; /* Выравнивание по верхнему краю */
-    padding: 20px; /* Отступы внутри блока */
-    background-color: #000000; /* Цвет фона блока */
-    box-sizing: border-box; /* Учитывает отступы и границы в ширине и высоте */
-    gap: 20px; /* Промежуток между элементами */
-    font-weight: bold;
-}
-
-.tooltip {
-    position: relative; /* Позволяет позиционировать вложенные элементы относительно этого блока */
-    display: inline-block; /* Размещает элемент в строке, но позволяет ему задавать размеры */
-    cursor: pointer; /* Изменяет курсор при наведении, показывая, что элемент интерактивен */
-}
-.tooltip-text {
-    visibility: hidden; /* Скрывает текст по умолчанию */
-    background-color: rgb(0, 34, 82); /* Устанавливает темно-синий фон */
-    color: rgb(255, 255, 255); /* Устанавливает белый цвет текста */
-    text-align: center; /* Выравнивает текст по центру */
-    padding: 8px; /* Добавляет отступы внутри блока */
-    border-radius: 5px; /* Закругляет углы */
-    position: absolute; /* Позволяет точно позиционировать элемент относительно родителя */
-    bottom: 125%; /* Подсказка появляется над элементом */
-    left: 50%; /* Центрирование подсказки */
-    transform: translateX(-50%); /* Корректирует позицию для точного центрирования */
-    opacity: 0; /* Начальная прозрачность – элемент невидим */
-    transition: opacity 0.3s; /* Плавное появление при активации */
-    font-style: normal; /* Устанавливает нормальный стиль текста */
-}
-.tooltip:hover .tooltip-text {
-    visibility: visible; /* Делает подсказку видимой */
-    opacity: 1; /* Устанавливает полную непрозрачность */
-}
-
-.menu-container {
-    display: inline-flex;
-    position: relative;
-}
-.dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #4a0b7e;
-    border: 2px solid #3e0064;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 100;
-    white-space: nowrap;
-}
-.dropdown a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-.dropdown a:hover {
-    background-color: #400a6c;
+    padding-top: 40px; /* Отступ сверху */
 }
 
 header {
@@ -181,16 +58,172 @@ header nav {
     height: 100%;
 }
 
-#titleAbout {
-    font-size: 35px; /* Размер заголовка */
-    color: #000000; /* Цвет текста */
-    text-align: center; /* Центрирует текст */
-    margin: auto; /* Убирает отступы вокруг заголовка */
-    margin-bottom: 20px; /* Отступ снизу */
+.menu-container {
+    display: inline-flex; /* Использует flexbox для размещения элементов */
+    position: relative; /* Позволяет позиционировать дочерние элементы относительно этого контейнера */
+}
+.dropdown {
+    display: none; /* Скрывает выпадающее меню по умолчанию */
+    position: absolute; /* Позволяет позиционировать выпадающее меню относительно родительского контейнера */
+    top: 100%; /* Размещает меню под родительским элементом */
+    left: 0; /* Выравнивает по левому краю родительского элемента */
+    background-color: #4a0b7e; /* Цвет фона выпадающего меню */
+    border: 2px solid #3e0064; /* Граница выпадающего меню */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Тень под выпадающим меню */
+    z-index: 100; /* Устанавливает порядок наложения */
+    white-space: nowrap; /* Запрет на перенос текста в выпадающем меню */
+}
+.dropdown a {
+    display: block; /* Каждый элемент меню занимает всю ширину контейнера */
+    padding: 10px; /* Отступ внутри элемента меню */
+    text-decoration: none; /* Убирает подчеркивание у ссылок */
+    color: rgb(255, 255, 255); /* Цвет текста ссылок */
+}
+.dropdown a:hover {
+    background-color: #400a6c; /* Цвет фона при наведении на элемент меню */
+}
+.menu-container:hover .dropdown {
+    display: block; /* Показывает выпадающее меню при наведении на родительский элемент */
+}
+
+footer {
+    display: flex; /* Использует flexbox для размещения элементов */
+    background-color: #261d29; /* Устанавливает темный фон для footer */
+    color: #fff; /* Делает текст белым */
+    width: 100%; /* Задает ширину на 100% */
+    flex-wrap: wrap; /* Позволяет переносить строки */
+    margin-top: 20px; /* Отступ сверху */
+    padding-left: 10px; /* Отступ слева */
+    line-height: 1; /* Высота строки для лучшей читаемости */
+    font-size: 12px; /* Размер шрифта */
+    flex-direction: column; /* Размещает элементы вертикально */
+}
+.footer-nav {
+    display: flex; /* Использует flexbox для размещения элементов */
+    flex-direction: row; /* Размещает элементы горизонтально */
+    gap: 20px; /* Промежуток между элементами */
+    align-items: center; /* Выравнивание по центру */
+}
+.footer-nav a {
+    display: flex; /* Использует flexbox для размещения элементов */
+    color: #fff; /* Цвет текста */
+    cursor: pointer; /* Изменяет курсор при наведении, показывая, что элемент интерактивен */
+    text-decoration: none; /* Убирает подчеркивание у ссылок */
+}
+#scrollToTop {
+    cursor: pointer; /* Изменяет курсор при наведении, показывая, что элемент интерактивен */
+}
+
+.mainTitle {
+    display: flex; /* Использует flexbox для размещения элементов */
     background-color: #610182; /* Цвет фона */
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px; /* Отступы внутри заголовка */
-    padding-bottom: 20px;
-    /* margin-top: 10px; */
+    justify-content: center; /* Выравнивание по центру */
+    padding-top: 20px; /* Отступ сверху */
+    padding-bottom: 20px; /* Отступ снизу */
+    font-size: 40px;
+    margin-top: 0;
+}
+
+.about-container1 {
+    display: flex; /* Использует flexbox для размещения элементов */
+    flex-direction: row; /* Размещает элементы горизонтально */
+    align-items: stretch; /* Выравнивание по центру */
+}
+
+#whoWeAre {
+    display: flex; /* Использует flexbox для размещения элементов */
+    flex-direction: column; /* Размещает элементы вертикально */
+    margin-left: 20px; /* Отступ слева */
+    margin-right: 20px; /* Отступ справа */
+    border: 4px solid #450058; /* Граница блока */
+    overflow: hidden; /* Скрывает переполнение содержимого */
+    border-radius: 20px; /* Скругление углов блока */
+    max-width: 50%; /* Максимальная ширина блока */
+    min-width: 300px; /* Минимальная ширина блока */
+    min-height: 100%; /* Минимальная высота блока */
+}
+#whoWeAreTitle {
+    text-align: center; /* Центрирует текст */
+    background-color: #2f003e;
+    padding: 15px; /* Отступы внутри заголовка */
+    margin: 0; /* Убирает отступы вокруг заголовка */
+    color: #fff; /* Цвет текста заголовка */
+}
+#whoWeAreParagraphs {
+    display: flex; /* Использует flexbox для размещения элементов */
+    flex-wrap: wrap; /* Позволяет переносить строки */
+    justify-content: space-between; /* Равномерно распределяет текст */
+    background-color: #000000; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    font-weight: bold; /* Жирный шрифт */
+    padding: 15px; /* Отступы внутри блока */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    gap: 20px; /* Промежуток между элементами */
+    box-sizing: border-box; /* Учитывает отступы и границы в ширине и высоте */
+    flex-grow: 1; /* Позволяет блоку занимать доступное пространство */
+}
+#whoWeAreParagraphs p {
+    margin: 5px; /* Отступы вокруг параграфов */
+}
+
+#navigationAbout {
+    display: flex; /* Использует flexbox для размещения элементов */
+    flex-direction: column; /* Размещает элементы вертикально */
+    margin-left: 20px; /* Отступ слева */
+    margin-right: 20px; /* Отступ справа */
+    border: 4px solid #450058; /* Граница блока */
+    overflow: hidden; /* Скрывает переполнение содержимого */
+    border-radius: 20px; /* Скругление углов блока */
+    width: 20%; /* Максимальная ширина блока */
+    min-width: 100px; /* Минимальная ширина блока */
+}
+#mainNavTitle {
+    text-align: center; /* Центрирует текст */
+    background-color: #2f003e; /* Цвет фона заголовка */
+    padding: 15px; /* Отступы внутри заголовка */
+    margin: 0; /* Убирает отступы вокруг заголовка */
+    color: #fff; /* Цвет текста заголовка */
+}
+#mainNavList ul {
+    display: flex; /* Использует flexbox для размещения элементов */
+    flex-wrap: wrap; /* Позволяет переносить строки */
+    justify-content: space-between; /* Равномерно распределяет элементы */
+    list-style-type: none; /* Убирает маркеры списка */
+    padding: 0; /* Убирает отступы у списка */
+    margin: 0; /* Убирает отступы у списка */
+    background-color: #000000;
+    padding: 15px; /* Отступы внутри блока */
+    gap: 20px; /* Промежуток между элементами */
+    box-sizing: border-box; /* Учитывает отступы и границы в ширине и высоте */
+    font-weight: bold; /* Жирный шрифт */
+    flex-grow: 1; /* Позволяет блоку занимать доступное пространство */
+}
+.mainNav {
+    cursor: pointer; /* Изменяет курсор при наведении, показывая, что элемент интерактивен */
+    color: #ffffff; /* Цвет текста */
+    text-decoration: none; /* Убирает подчеркивание у ссылок */
+}
+
+.tooltip {
+    position: relative; /* Позволяет позиционировать вложенные элементы относительно этого блока */
+    display: inline-block; /* Размещает элемент в строке, но позволяет ему задавать размеры */
+    cursor: pointer; /* Изменяет курсор при наведении, показывая, что элемент интерактивен */
+}
+.tooltip:hover .tooltip-text {
+    visibility: visible; /* Показывает текст при наведении на элемент с классом tooltip */
+    opacity: 1; /* Устанавливает непрозрачность текста */
+}
+.tooltip-text {
+    visibility: hidden; /* Скрывает текст по умолчанию */
+    background-color: #002252; /* Цвет фона текста */
+    font-style: normal; /* Устанавливает нормальный стиль текста */
+    position: absolute; /* Позволяет точно позиционировать элемент относительно родителя */
+    bottom: 125%; /* Размещает текст над элементом */
+    left: 50%; /* Центрирует текст по горизонтали */
+    text-align: center; /* Выравнивает текст по центру */
+    padding: 8px; /* Отступы внутри текста */
+    border-radius: 5px; /* Закругляет углы */
+    transform: translateX(-50%); /* Корректирует позицию для точного центрирования */
+    opacity: 0; /* Начальная прозрачность – элемент невидим */
+    transition: opacity 0.3s; /* Плавное появление при активации */
 }
