@@ -6,11 +6,11 @@ body {
     font-family: Arial, Times New Roman; /* Устанавливает шрифт для всего документа */
     margin: 0; /* Убирает отступы вокруг body */
     padding: 0; /* Убирает внутренние отступы у body */
-
     height: 100%; /* Задает высоту body на 100% высоты окна браузера */
-    background-color: #9885ee; /* Устанавливает черный фон для body */
+    background-color: #9885ee; 
     color: #000000; /* Делает текст белым */
     width: 100%;
+    overflow-x: hidden; /* Убирает горизонтальную прокрутку */
 }
 body h1, h2, h3, h4, h5, h6, p {
     margin-left: 15px; 
@@ -44,6 +44,7 @@ footer {
     line-height: 1.2; /* Высота строки для лучшей читаемости */
     font-size: 12px; /* Размер шрифта */
     margin-top: 20px;
+    width: 100%; /* Задает ширину на 100% */
 }
 .footer-nav {
     display: flex; /* Использует flexbox для размещения элементов */
