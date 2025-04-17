@@ -6,14 +6,15 @@ body {
     font-family: Arial, Times New Roman; /* Устанавливает шрифт для всего документа */
     margin: 0; /* Убирает отступы вокруг body */
     padding: 0; /* Убирает внутренние отступы у body */
-    line-height: 1,6; /* Устанавливает высоту строки для лучшей читаемости */
+
     height: 100%; /* Задает высоту body на 100% высоты окна браузера */
     background-color: #9885ee; /* Устанавливает черный фон для body */
     color: #000000; /* Делает текст белым */
-    h1, h2, h3, h4, h5, h6, p {
-        margin-left: 15px; 
-    } /* отступы слева у заголовков и параграфов */
+    width: 100%;
 }
+body h1, h2, h3, h4, h5, h6, p {
+    margin-left: 15px; 
+} /* отступы слева у заголовков и параграфов */
 
 .wrapper {
     display: flex; /* Использует flexbox для размещения элементов */
@@ -117,16 +118,16 @@ footer {
 }
 
 .menu-container {
-    position: relative;
     display: inline-flex;
+    position: relative;
 }
 .dropdown {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: white;
-    border: 1px solid #ccc;
+    background-color: #4a0b7e;
+    border: 2px solid #3e0064;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 100;
     white-space: nowrap;
@@ -135,53 +136,48 @@ footer {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 .dropdown a:hover {
-    background-color: #f1f1f1;
+    background-color: #400a6c;
 }
 
 header {
-    display: inline-flex; /* Включаем Flexbox для навигации */
-    justify-content: flex-start; /* Выравнивание кнопок по горизонтали */
-    align-items: stretch; /* Выравнивание кнопок по вертикали */
-    background-color: #400c51; /* Цвет фона навигации */
-    min-height: 40px; /* Высота навигации */
-    position: fixed; /* Фиксируем навигацию вверху страницы */
-    width: 100%; /* Ширина навигации на всю страницу */
-    z-index: 1000; /* Устанавливаем высокий z-index, чтобы навигация была поверх других элементов */
-    flex-wrap: nowrap; /* Запрещаем перенос кнопок на новую строку */
-    font-size: 1; /* Убираем размер шрифта, чтобы избежать пробелов между кнопками */
+    display: flex; /* Использует grid для размещения элементов */
+    z-index: 1000; /* Устанавливает порядок наложения */
+    position: fixed; /* Фиксирует навигацию в верхней части страницы */
+    top: 0; /* Привязывает к верхней части окна браузера */
+    width: 100%; /* Задает ширину на 100% */
+    height: 40px; /* Высота навигации */
+    background-color: #47005f; /* Цвет фона навигации */
+    flex-direction: row; /* главная ось по горизонтали */
+    align-items: center; /* Выравнивание по центру */
+    border-bottom: 3px solid #39004c;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Тень под навигацией */
+}
+header nav {
+    display: inline-flex;
+    height: 100%;
 }
 .buttonsNav-header {
-    display: inline-flex; /* Размещает кнопки в строке */
-    align-items: center; /* Выравнивание кнопок по вертикали */
-    justify-content: center; /* Центрирует текст внутри кнопок */
-    padding-left: 10px; /* Отступы внутри кнопок */
-    padding-right: 10px; /* Отступы внутри кнопок */
-    color: white; /* Цвет текста */
-    cursor: pointer; /* Указываем, что элемент кликабельный */
-    background: none; /* Убираем фон */
-    background-color: #400c51;
-    border-left: 3px solid #320840; 
-    border-right: 3px solid #320840; 
-    border-top: none;
-    border-bottom: none;
-    height: 100%; /* Высота кнопок равна высоте навигации */
-    box-sizing: border-box; /* Учитывает отступы и границы в ширине и высоте */
-    white-space: nowrap; /* Запрещает перенос строк внутри кнопок */
+    padding-left: 10px; /* Отступ слева */
+    padding-right: 10px; /* Отступ справа */
+    color: #fff; /* Цвет текста */
+    font-size: 16px; /* Размер текста */
+    background-color: #47005f; /* Цвет фона */
+    border-top: none; /* Убирает верхнюю границу */
+    border-bottom: none; /* Убирает нижнюю границу */
+    border-left: none; /* Убирает левую границу */
+    border-right: 2px solid #39004c; /* Убирает правую границу */
+    flex-wrap: nowrap; /* Запрет на перенос текста */
 }
 .buttonsNav-header:hover {
     background-color: #3a094a; /* Цвет фона при наведении */
     transition: background-color 0.3s; /* Плавный переход цвета фона */
 }
 #logo-header {
-    display: inline-flex; /* Размещает логотип в строке */
-    align-items: center; /* Выравнивание кнопок по вертикали */
-    justify-content: center; /* Центрирует текст внутри кнопок */
-    height: 100%; /* Высота кнопок равна высоте навигации */
-    aspect-ratio: 1; /* Соотношение сторон 1:1 */
-    box-sizing: border-box; /* Учитывает отступы и границы в ширине и высоте */
+    margin-left: auto;
+    height: 100%;
 }
 
 #titleAbout {
