@@ -17,7 +17,7 @@ body {
     display: flex; /* Использует flexbox для размещения элементов */
     flex-direction: column; /* Размещает элементы вертикально */
     min-height: 100vh; /* Минимальная высота равна высоте окна браузера */
-    padding-top: 40px; /* Отступ сверху */
+    padding-top: 30px; /* Отступ сверху */
 }
 
 header {
@@ -26,7 +26,7 @@ header {
     position: fixed; /* Фиксирует навигацию в верхней части страницы */
     top: 0; /* Привязывает к верхней части окна браузера */
     width: 100%; /* Задает ширину на 100% */
-    height: 40px; /* Высота навигации */
+    height: 30px; /* Высота навигации */
     background-color: #47005f; /* Цвет фона навигации */
     flex-direction: row; /* главная ось по горизонтали */
     align-items: center; /* Выравнивание по центру */
@@ -41,7 +41,7 @@ header nav {
     padding-left: 10px; /* Отступ слева */
     padding-right: 10px; /* Отступ справа */
     color: #fff; /* Цвет текста */
-    font-size: 16px; /* Размер текста */
+    font-size: 13px; /* Размер текста */
     background-color: #47005f; /* Цвет фона */
     border-top: none; /* Убирает верхнюю границу */
     border-bottom: none; /* Убирает нижнюю границу */
@@ -101,7 +101,7 @@ footer {
 .footer-nav {
     display: flex; /* Использует flexbox для размещения элементов */
     flex-direction: row; /* Размещает элементы горизонтально */
-    gap: 15px; /* Промежуток между элементами */
+    gap: 12px; /* Промежуток между элементами */
     align-items: center; /* Выравнивание по центру */
     flex-wrap: wrap;
 }
@@ -110,7 +110,7 @@ footer {
     color: #fff; /* Цвет текста */
     cursor: pointer; /* Изменяет курсор при наведении, показывая, что элемент интерактивен */
     text-decoration: none; /* Убирает подчеркивание у ссылок */
-    margin: 0; /* Убирает отступы вокруг элементов */
+    margin: 0; /* Убирает отступы вокруг ссылок */
 }
 #scrollToTop {
     cursor: pointer; /* Изменяет курсор при наведении, показывая, что элемент интерактивен */
@@ -120,17 +120,17 @@ footer {
     display: flex; /* Использует flexbox для размещения элементов */
     background-color: #610182; /* Цвет фона */
     justify-content: center; /* Выравнивание по центру */
-    padding-top: 10px; /* Отступ сверху */
-    padding-bottom: 10px; /* Отступ снизу */
-    font-size: 35px;
+    padding-top: 6px; /* Отступ сверху */
+    padding-bottom: 6px; /* Отступ снизу */
+    font-size: 30px;
     margin-top: 0;
 }
 
 .about-container1 {
     display: flex; /* Использует flexbox для размещения элементов */
-    flex-direction: row; /* Размещает элементы горизонтально */
-    align-items: stretch; /* Выравнивание по центру */
+    flex-direction: column; /* Размещает элементы горизонтально */
     justify-content: center; /* Выравнивание по центру */
+    gap: 20px; /* Промежуток между элементами */
 }
 
 #whoWeAre {
@@ -138,19 +138,19 @@ footer {
     flex-direction: column; /* Размещает элементы вертикально */
     margin-left: 20px; /* Отступ слева */
     margin-right: 20px; /* Отступ справа */
-    border: 4px solid #450058; /* Граница блока */
+    border: 3px solid #450058; /* Граница блока */
     overflow: hidden; /* Скрывает переполнение содержимого */
     border-radius: 20px; /* Скругление углов блока */
-    max-width: 50%; /* Максимальная ширина блока */
-    min-width: 300px; /* Минимальная ширина блока */
+    min-width: 200px; /* Минимальная ширина блока */
     min-height: 100%; /* Минимальная высота блока */
 }
 #whoWeAreTitle {
     text-align: center; /* Центрирует текст */
     background-color: #2f003e;
-    padding: 15px; /* Отступы внутри заголовка */
+    padding: 8px; /* Отступы внутри заголовка */
     margin: 0; /* Убирает отступы вокруг заголовка */
     color: #fff; /* Цвет текста заголовка */
+    font-size: 18px; /* Размер текста заголовка */
 }
 #whoWeAreParagraphs {
     display: flex; /* Использует flexbox для размещения элементов */
@@ -159,14 +159,15 @@ footer {
     background-color: #000000; /* Цвет фона */
     color: #fff; /* Цвет текста */
     font-weight: bold; /* Жирный шрифт */
-    padding: 15px; /* Отступы внутри блока */
+    padding: 10px; /* Отступы внутри блока */
     align-items: flex-start; /* Выравнивание по верхнему краю */
-    gap: 20px; /* Промежуток между элементами */
+    gap: 12px; /* Промежуток между элементами */
     box-sizing: border-box; /* Учитывает отступы и границы в ширине и высоте */
     flex-grow: 1; /* Позволяет блоку занимать доступное пространство */
+    font-size: 13px;
 }
 #whoWeAreParagraphs p {
-    margin: 5px; /* Отступы вокруг параграфов */
+    margin: 3px; /* Отступы вокруг параграфов */
 }
 
 #navigationAbout {
@@ -177,14 +178,14 @@ footer {
     border: 4px solid #450058; /* Граница блока */
     overflow: hidden; /* Скрывает переполнение содержимого */
     border-radius: 20px; /* Скругление углов блока */
-    width: 30%; /* Максимальная ширина блока */
     min-width: 150px; /* Минимальная ширина блока */
     min-height: 100%; /* Минимальная высота блока */
 }
 #mainNavTitle {
+    font-size: 18px; /* Размер текста заголовка */
     text-align: center; /* Центрирует текст */
     background-color: #2f003e; /* Цвет фона заголовка */
-    padding: 15px; /* Отступы внутри заголовка */
+    padding: 8px; /* Отступы внутри заголовка */
     margin: 0; /* Убирает отступы вокруг заголовка */
     color: #fff; /* Цвет текста заголовка */
 }
@@ -200,10 +201,12 @@ footer {
     padding: 0; /* Убирает отступы у списка */
     margin: 0; /* Убирает отступы у списка */
     background-color: #000000;
-    padding: 15px; /* Отступы внутри блока */
-    gap: 20px; /* Промежуток между элементами */
+    padding: 10px; /* Отступы внутри блока */
+    gap: 12px; /* Промежуток между элементами */
     box-sizing: border-box; /* Учитывает отступы и границы в ширине и высоте */
     font-weight: bold; /* Жирный шрифт */
+    font-size: 13px; /* Размер текста */
+    flex-grow: 1; /* Позволяет блоку занимать доступное пространство */
 }
 .mainNav {
     cursor: pointer; /* Изменяет курсор при наведении, показывая, что элемент интерактивен */
