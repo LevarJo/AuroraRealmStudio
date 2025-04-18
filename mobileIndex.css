@@ -10,14 +10,14 @@ body {
     width: 100%; /* Задает ширину на 100% */
     overflow-x: hidden; /* Убирает горизонтальную прокрутку */
     color: rgb(0, 0, 0); /* Цвет текста */
-    background-color: #9885ee; /* Цвет фона */
+    background-color: #ffffff; /* Цвет фона */
 }
 
 .wrapper {
     display: flex; /* Использует flexbox для размещения элементов */
     flex-direction: column; /* Размещает элементы вертикально */
     min-height: 100vh; /* Минимальная высота равна высоте окна браузера */
-    padding-top: 30px; /* Отступ сверху */
+    padding-top: 35px; /* Отступ сверху */
 }
 
 header {
@@ -26,7 +26,7 @@ header {
     position: fixed; /* Фиксирует навигацию в верхней части страницы */
     top: 0; /* Привязывает к верхней части окна браузера */
     width: 100%; /* Задает ширину на 100% */
-    height: 30px; /* Высота навигации */
+    height: 35px; /* Высота навигации */
     background-color: #47005f; /* Цвет фона навигации */
     flex-direction: row; /* главная ось по горизонтали */
     align-items: center; /* Выравнивание по центру */
@@ -92,7 +92,7 @@ footer {
     color: #fff; /* Делает текст белым */
     width: 100%; /* Задает ширину на 100% */
     flex-wrap: wrap; /* Позволяет переносить строки */
-    margin-top: 20px; /* Отступ сверху */
+    margin: 0; /* Отступ сверху */
     padding-left: 10px; /* Отступ слева */
     line-height: 1; /* Высота строки для лучшей читаемости */
     font-size: 12px; /* Размер шрифта */
@@ -119,11 +119,13 @@ footer {
 .mainTitle {
     display: flex; /* Использует flexbox для размещения элементов */
     background-color: #610182; /* Цвет фона */
+    color: #fff; /* Цвет текста */
     justify-content: center; /* Выравнивание по центру */
     padding-top: 6px; /* Отступ сверху */
     padding-bottom: 6px; /* Отступ снизу */
     font-size: 30px;
     margin-top: 0;
+    margin-bottom: 0; /* Убирает отступы вокруг заголовка */
 }
 
 .about-container1 {
@@ -131,13 +133,17 @@ footer {
     flex-direction: column; /* Размещает элементы горизонтально */
     justify-content: center; /* Выравнивание по центру */
     gap: 20px; /* Промежуток между элементами */
+    background-color: #9885ee; /* Цвет фона */
+    padding: 20px; /* Отступы внутри контейнера */
+    border-bottom-left-radius: 20px; /* Скругление углов */
+    border-bottom-right-radius: 20px; /* Скругление углов */
+    margin: 0;
 }
 
 #whoWeAre {
     display: flex; /* Использует flexbox для размещения элементов */
     flex-direction: column; /* Размещает элементы вертикально */
-    margin-left: 20px; /* Отступ слева */
-    margin-right: 20px; /* Отступ справа */
+    margin: 0; /* Центрирует блок по горизонтали */
     border: 3px solid #450058; /* Граница блока */
     overflow: hidden; /* Скрывает переполнение содержимого */
     border-radius: 20px; /* Скругление углов блока */
@@ -173,8 +179,7 @@ footer {
 #navigationAbout {
     display: flex; /* Использует flexbox для размещения элементов */
     flex-direction: column; /* Размещает элементы вертикально */
-    margin-left: 20px; /* Отступ слева */
-    margin-right: 20px; /* Отступ справа */
+    margin: 0; /* Центрирует блок по горизонтали */
     border: 4px solid #450058; /* Граница блока */
     overflow: hidden; /* Скрывает переполнение содержимого */
     border-radius: 20px; /* Скругление углов блока */
@@ -236,4 +241,75 @@ footer {
     transform: translateX(-50%); /* Корректирует позицию для точного центрирования */
     opacity: 0; /* Начальная прозрачность – элемент невидим */
     transition: opacity 0.3s; /* Плавное появление при активации */
+}
+
+#infoAbout {
+    display: flex; /* Использует flexbox для размещения элементов */
+    flex-direction: column; /* Размещает элементы горизонтально */
+    margin: 0; /* Убирает отступы вокруг блока */
+    background: linear-gradient(to bottom, #2f003e 80%, #8300af);
+    margin-top: 40px; /* Отступ сверху */;
+    margin-bottom: 0;
+    color: rgb(0, 0, 0); /* Цвет текста */
+    justify-content: space-between;
+}
+
+#infoAbout-sections {
+    display: inline-flex; /* Использует flexbox для размещения элементов */
+    flex-direction: column; /* Размещает элементы вертикально */
+    /* border-top: 5px solid #000000; */
+}
+.section-info {
+    margin-top: 20px; /* Отступ сверху */
+    margin-bottom: 20px; /* Отступ снизу */
+    margin-left: 40px; /* Отступ слева */
+    margin-right: 40px; /* Отступ справа */
+    max-width: 100%; /* Максимальная ширина блока */
+    min-width: 200px; /* Минимальная ширина блока */
+    border-radius: 15px; /* Скругление углов блока */
+    overflow: hidden; /* Скрывает переполнение содержимого */
+}
+.section-title {
+    font-size: 25px;
+    margin: 0;
+    background-color: #6200a8;
+    color: #fff;
+    display: flex; /* Использует flexbox для размещения элементов */
+    justify-content: center; /* Выравнивание по центру */
+    padding: 10px; /* Отступы внутри заголовка */
+}
+.section-text {
+    background-color: #ffffff;
+    font-size: 14px;
+    display: flex; /* Использует flexbox для размещения элементов */
+    flex-direction: column; /* Размещает элементы вертикально */
+    justify-content: center; /* Выравнивание по центру */
+    padding: 15px; /* Отступы внутри текста */
+}
+.section-text p {
+    margin: 0;
+    margin-top: 4px; /* Отступ сверху */
+    margin-bottom: 4px; /* Отступ снизу */
+}
+
+#AuroraRealm-Studio-info {
+    display: flex; /* Использует flexbox для размещения элементов */
+    color: #fff; /* Цвет текста */
+    margin: 0; /* Убирает отступы вокруг блока */
+    padding-left: 20%;
+    font-size: 30px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+}
+#AuroraRealm-info-p {
+    position: relative; /* Позволяет позиционировать вложенные элементы относительно этого блока */
+}
+#AuroraRealm-info-p p {
+    margin: 0;
+    margin-top: 20px; /* Отступ сверху */
+    margin-bottom: 2em; /* Отступ снизу */
+}
+#Studio-info-p {
+    position: absolute; /* Позволяет позиционировать элемент относительно родителя */
+    left: 4em; /* Отступ слева */
+    bottom: -1em; /* Отступ снизу */
 }
