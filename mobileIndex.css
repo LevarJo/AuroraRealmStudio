@@ -1,5 +1,8 @@
 html {
     scroll-behavior: smooth; /* Плавная прокрутка при переходе по якорям */
+    touch-action: manipulation; /* Убирает возможность масштабирования на мобильных устройствах */
+    -webkit-tap-highlight-color: transparent; /* Убирает выделение текста при касании на мобильных устройствах */
+    -webkit-overflow-scrolling: touch; /* Включает плавную прокрутку на iOS */
 }
 
 body {
@@ -284,7 +287,7 @@ footer {
     display: flex; /* Использует flexbox для размещения элементов */
     flex-direction: column; /* Размещает элементы вертикально */
     justify-content: center; /* Выравнивание по центру */
-    padding: 15px; /* Отступы внутри текста */
+    padding: 10px; /* Отступы внутри текста */
 }
 .section-text p {
     margin: 0;

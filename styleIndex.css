@@ -125,7 +125,7 @@ footer {
     padding-top: 10px; /* Отступ сверху */
     padding-bottom: 10px; /* Отступ снизу */
     font-size: 35px; /* Размер шрифта */
-    margin-bottom: 50px; /* Убирает отступы вокруг заголовка */
+    margin-bottom: 0; /* Убирает отступы вокруг заголовка */
     margin-top: 0; /* Убирает отступы вокруг заголовка */
 }
 
@@ -136,7 +136,8 @@ footer {
     background-color: #9885ee; /* Цвет фона */
     padding-top: 40px; /* Отступ сверху */
     padding-bottom: 40px; /* Отступ снизу */
-    border-radius: 30px; /* Скругление углов блока */
+    border-bottom-left-radius: 30px; /* Скругление углов блока */
+    border-bottom-right-radius: 30px; /* Скругление углов блока */
     gap: 40px; /* Промежуток между элементами */
     width: 100%; /* Автоматическая ширина */
 }
@@ -281,7 +282,7 @@ footer {
     display: flex; /* Использует flexbox для размещения элементов */
     flex-direction: column; /* Размещает элементы вертикально */
     justify-content: center; /* Выравнивание по центру */
-    padding: 20px; /* Отступы внутри текста */
+    padding: 10px; /* Отступы внутри текста */
 }
 .section-text p {
     margin: 0;
