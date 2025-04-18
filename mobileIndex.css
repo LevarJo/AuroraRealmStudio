@@ -296,8 +296,8 @@ footer {
     display: flex; /* Использует flexbox для размещения элементов */
     color: #fff; /* Цвет текста */
     margin: 0; /* Убирает отступы вокруг блока */
-    padding-left: 20%;
-    font-size: 30px; /* Размер шрифта */
+    padding-left: 15%;
+    font-size: 10vw; /* Размер шрифта */
     font-weight: bold; /* Жирный шрифт */
 }
 #AuroraRealm-info-p {
