@@ -292,21 +292,33 @@ footer {
 
 #AuroraRealm-Studio-info {
     display: flex; /* Использует flexbox для размещения элементов */
-    flex-grow: 1; /* Позволяет блоку занимать доступное пространство */
-    color: #fff; /* Цвет текста */
-    writing-mode: vertical-rl; /* Вертикальное направление */
-    text-orientation: upright; /* Буквы остаются ровными */
-    margin: 0; /* Убирает отступы вокруг блока */
     justify-content: center; /* Выравнивание по центру */
     align-items: center; /* Выравнивание по центру */
-    font-size: 40px; /* Размер шрифта */
+    flex-grow: 1;
+}
+#AuroraRealm-Studio-info-p {
+    display: flex; /* Использует flexbox для размещения элементов */
+    flex-direction: row;
+    justify-content: center; /* Выравнивание по центру */
+    align-items: center; /* Выравнивание по центру */
+    min-height: fit-content;
+    min-width: fit-content;
+    transform: translateY(-3em); /* Сдвиг вниз */
+}
+#AuroraRealm-Studio-info-p p {
+    display: inline-flex; /* Использует flexbox для размещения элементов */
+    writing-mode: vertical-rl; /* Вертикальное направление */
+    text-orientation: upright; /* Буквы остаются ровными */
     font-weight: bold; /* Жирный шрифт */
+    color: #ffffff; /* Цвет текста */
+    font-size: 40px; /* Размер текста */
 }
 #AuroraRealm-info-p {
-    position: relative; /* Позволяет позиционировать вложенные элементы относительно этого блока */
+    margin-left: 1em; /* Отступ слева */
+    margin-right: 0;
 }
 #Studio-info-p {
-    position: absolute; /* Позволяет позиционировать элемент относительно родителя */
-    left: 1em; /* Отступ слева */
-    bottom: -3em; /* Отступ снизу */
+    margin-right: 1em; /* Отступ справа */
+    margin-left: 0;
+    transform: translateY(6em); /* Сдвиг вниз */
 }

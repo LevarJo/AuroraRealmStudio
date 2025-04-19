@@ -303,10 +303,10 @@ footer {
     font-size: 10vw; /* Размер шрифта */
     font-weight: bold; /* Жирный шрифт */
 }
-#AuroraRealm-info-p {
+#AuroraRealm-Studio-info-p {
     position: relative; /* Позволяет позиционировать вложенные элементы относительно этого блока */
 }
-#AuroraRealm-info-p p {
+#AuroraRealm-Studio-info-p p {
     margin: 0;
     margin-top: 20px; /* Отступ сверху */
     margin-bottom: 2em; /* Отступ снизу */
